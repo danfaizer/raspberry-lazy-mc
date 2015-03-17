@@ -1,0 +1,18 @@
+---
+# This playbook configures Raspberry Pi 2 with:
+#   - Transmission
+#   - SickRage
+#   - CouchPotato
+#   - Kodi
+
+- hosts: 127.0.0.1
+  connection: local
+  user: pi
+
+  roles:
+    - base
+    - { role: shares, when: shared_storage }
+    - transmission
+    - sickrage
+    - couchpotato
+    - kodi

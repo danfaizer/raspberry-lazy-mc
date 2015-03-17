@@ -1,0 +1,31 @@
+# Default playbook values
+# These variables can be overriden by specifying them as parameter in the playbook run
+
+#############
+# Base role #
+#############
+
+folder_completed = /home/pi/downloaded
+folder_incomplete = /home/pi/incomplete
+folder_blackhole = /home/pi/watch
+folder_shows = /home/pi/shows
+folder_films = /home/pi/films
+
+###############
+# Shares role #
+###############
+
+# shares_protocol
+# values: [ cifs | nfs ]
+# default: [ cifs ]
+shares_protocol = cifs
+
+# shares_cifs_authentication
+# values: [ true | false ]
+# default: [ true ]
+shares_cifs_authentication = true
+
+shares_cifs_user = admin
+shares_cifs_pass = admin
+
+shares_cifs_credential_file = /etc/credentials
