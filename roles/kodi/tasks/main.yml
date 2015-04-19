@@ -1,0 +1,3 @@
+# Increase the memory by changing gpu_mem to 128
+# /boot/config.txt
+# gpu_mem=128

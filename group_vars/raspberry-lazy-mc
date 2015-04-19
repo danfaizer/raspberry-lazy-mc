@@ -5,27 +5,53 @@
 # Base role #
 #############
 
-folder_completed = /home/pi/downloaded
-folder_incomplete = /home/pi/incomplete
-folder_blackhole = /home/pi/watch
-folder_shows = /home/pi/shows
-folder_films = /home/pi/films
+# folder_completed: Folder where completed Transmission downloads are stored
+folder_completed: /home/pi/downloaded
+
+# folder_incomplete: Folder where incomplete Transmission downloads are stored
+folder_incomplete: /home/pi/incomplete
+
+# folder_blackhole: Folder where .torrent files are left for Transmission processing
+folder_blackhole: /home/pi/watch
+
+# folder_shows: Folder where SickRage shows are stored after Transmission have processed
+folder_shows: /home/pi/shows
+
+# folder_films: Folder where CouchPotato films are stored after Transmission have processed
+folder_films: /home/pi/films
 
 ###############
 # Shares role #
 ###############
 
-# shares_protocol
+# shared_storage: Defines whether to use shared (cifs/nfs) or local (fat/ntfs) storage
+# values: [ true | false ]
+# default: [ false ]
+shared_storage: false
+
+# share_protocol: Defines whether to use CIFS or NFS protocol for shared storage
 # values: [ cifs | nfs ]
 # default: [ cifs ]
-shares_protocol = cifs
+share_protocol: cifs
 
-# shares_cifs_authentication
+# share_cifs_authentication: Define if authentication for CIFS is required
 # values: [ true | false ]
-# default: [ true ]
-shares_cifs_authentication = true
+# default: [ false ]
+share_cifs_authentication: false
 
-shares_cifs_user = admin
-shares_cifs_pass = admin
+share_cifs_user: admin
+share_cifs_pass: admin
 
-shares_cifs_credential_file = /etc/credentials
+share_cifs_credential_file: /etc/credentials
+
+# local_storage_fs: Defines whether to use FAT or NTFS filesystem for local storage
+# values: [ fat / ntfs ]
+# default: [ fat ]
+local_storage_fs: fat
+
+#####################
+# Transmission role #
+#####################
+
+
+

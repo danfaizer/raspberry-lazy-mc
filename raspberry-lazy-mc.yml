@@ -13,6 +13,6 @@
     - base
     - { role: shares, when: shared_storage }
     - transmission
-    - sickrage
-    - couchpotato
-    - kodi
+    # - sickrage
+    # - couchpotato
+    # - kodi

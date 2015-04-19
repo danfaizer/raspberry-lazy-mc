@@ -1,0 +1,24 @@
+---
+- name: Install transmission daemon
+  apt: pkg=transmission-daemon state=installed
+  tags: transmission-daemon
+  sudo: true
+
+- name: Stop transmission daemon
+  service: name=transmission-daemon state=stopped
+  sudo: true
+
+- name: Stop transmission daemon
+  service: name=transmission-daemon state=stopped
+  sudo: true
+
+- name: Load settings.json template
+  template: src=transmission-settings.json.j2 dest=/etc/transmission-daemon/settings.json
+  sudo: true
+
+- name: Modify daemon default user
+  
+
+- name: Stop transmission daemon
+  service: name=transmission-daemon state=restarted
+  sudo: true
