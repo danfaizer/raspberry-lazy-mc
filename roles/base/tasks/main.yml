@@ -1,14 +1,14 @@
    - name: Create completed folder
-    file: path={{ folder_completed }} state=directory
+     file: path={{ folder_completed }} state=directory
 
    - name: Create incomplete folder
-    file: path={{ folder_incomplete }} state=directory
+     file: path={{ folder_incomplete }} state=directory
 
    - name: Create blackhole folder
-    file: path={{ folder_blackhole }} state=directory
+     file: path={{ folder_blackhole }} state=directory
 
    - name: Create shows folder
-    file: path={{ folder_shows }} state=directory
+     file: path={{ folder_shows }} state=directory
 
    - name: Create films folder
-    file: path={{ folder_films }} state=directory
+     file: path={{ folder_films }} state=directory
