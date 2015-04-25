@@ -8,6 +8,9 @@
   service: name=transmission-daemon state=stopped
   sudo: true
 
+- name: Set root user for transmission daemon
+  lineinfile: dest=/etc/default/transmission-daemon regexp=^USER= line=USER=root
+
 - name: Load settings.json template
   template: src=transmission-settings.json.j2 dest=/etc/transmission-daemon/settings.json
   sudo: true
