@@ -24,7 +24,7 @@ folder_films: /home/pi/films
 # Shares role #
 ###############
 
-# shared_storage: Defines whether to use shared (cifs/nfs) or local (fat/ntfs) storage
+# shared_storage: Defines whether to use shared (cifs/nfs) storage
 # values: [ true | false ]
 # default: [ false ]
 shared_storage: false
@@ -43,6 +43,16 @@ share_cifs_user: admin
 share_cifs_pass: admin
 
 share_cifs_credential_file: /etc/credentials
+
+share_downloaded: none
+share_incomplete: none
+share_shows: none
+share_films: none
+
+# local_storage: Defines whether to use local (fat/ntfs) storage
+# values: [ true | false ]
+# default: [ false ]
+local_storage: false
 
 # local_storage_fs: Defines whether to use FAT or NTFS filesystem for local storage
 # values: [ fat / ntfs ]

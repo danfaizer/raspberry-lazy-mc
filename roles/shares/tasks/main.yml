@@ -1,3 +1,8 @@
   - name: Create CIFS credential file
     template: src=credentials.j2 dest={{ share_cifs_credential_file }} owner=root group=root mode=0400
     sudo: yes
+    when: share_protocol == "cifs" and share_cifs_authentication
+
+  - name: Mount downloaded folder
+    mount: name={{ folder_completed }} src={{ share_downloaded }} fstype={{ share_protocol }} opts=uid=1000,gid=1000,file_mode=0777,dir_mode=0777,credentials={{ share_cifs_credential_file }} state=present
+    sudo: yes
