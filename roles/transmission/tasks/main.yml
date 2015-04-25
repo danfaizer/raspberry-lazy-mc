@@ -13,7 +13,7 @@
   sudo: true
 
 - name: Load settings.json template
-  template: src=transmission-settings.json.j2 dest=/etc/transmission-daemon/settings.json
+  template: src=transmission-settings.json.j2 dest=/etc/transmission-daemon/settings.json mode=0644
   sudo: true
   notify:
     - restart transmission
