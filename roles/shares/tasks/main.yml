@@ -4,5 +4,5 @@
     when: share_protocol == "cifs" and share_cifs_authentication
 
   - name: Mount downloaded folder
-    mount: name={{ folder_completed }} src={{ share_downloaded }} fstype={{ share_protocol }} opts=uid=1000,gid=1000,file_mode=0777,dir_mode=0777,credentials={{ share_cifs_credential_file }} state=present
+    mount: name={{ folder_completed }} src={{ share_downloaded }} fstype={{ share_protocol }} opts=uid=1000,gid=1000,file_mode=0777,dir_mode=0777,credentials={{ share_cifs_credential_file }} state=mounted
     sudo: yes
