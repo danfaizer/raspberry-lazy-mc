@@ -9,7 +9,7 @@
   sudo: true
 
 - name: Set root user for transmission daemon
-  lineinfile: dest=/etc/default/transmission-daemon regexp=^USER= line=USER=root
+  lineinfile: dest=/etc/default/transmission-daemon regexp=^USER= line=USER=pi
   sudo: true
 
 - name: Load settings.json template
