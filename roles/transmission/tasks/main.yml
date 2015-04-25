@@ -10,6 +10,7 @@
 
 - name: Set root user for transmission daemon
   lineinfile: dest=/etc/default/transmission-daemon regexp=^USER= line=USER=root
+  sudo: true
 
 - name: Load settings.json template
   template: src=transmission-settings.json.j2 dest=/etc/transmission-daemon/settings.json
