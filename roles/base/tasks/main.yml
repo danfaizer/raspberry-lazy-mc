@@ -1,8 +1,14 @@
-  - name: Create required folders
-    file: path={{ item }} state=directory
-    with_items:
-      - "{{ folder_completed }}"
-      - "{{ folder_incomplete }}"
-      - "{{ folder_blackhole }}"
-      - "{{ folder_shows }}"
-      - "{{ folder_films }}"
+   - name: Create completed folder
+    file: path={{ folder_completed }} state=directory
+
+   - name: Create incomplete folder
+    file: path={{ folder_incomplete }} state=directory
+
+   - name: Create blackhole folder
+    file: path={{ folder_blackhole }} state=directory
+
+   - name: Create shows folder
+    file: path={{ folder_shows }} state=directory
+
+   - name: Create films folder
+    file: path={{ folder_films }} state=directory
